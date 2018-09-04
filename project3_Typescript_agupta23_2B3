@@ -1,0 +1,144 @@
+Script started on Thu 19 Jul 2018 05:02:30 PM EDT
+[?1034hbash-4.1$ uname -a
+Linux Zeus-1 2.6.32-696.18.7.el6.centos.plus.x86_64 #1 SMP Tue Jan 9 14:11:50 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+bash-4.1$ date
+Thu Jul 19 17:02:37 EDT 2018
+bash-4.1$ pwd
+/home/agupta23/Summer-CS262/project3_agupta23_2B3
+bash-4.1$ ;s
+bash: syntax error near unexpected token `;'
+bash-4.1$ ls
+cs262.pgm  half.pgm  image.c  image.h  Makefile  out.dat  program_to_hide.c  project3_Typescript_agupta23_2B3  Stego.c	StegoExtract.c
+bash-4.1$ make all
+gcc -g -Wall -c image.c
+[01m[Kimage.c:[m[K In function ‘[01m[KReadImage[m[K’:
+[01m[Kimage.c:139:3:[m[K [01;35m[Kwarning: [m[Klabel ‘[01m[Kotherwise[m[K’ defined but not used [[01;35m[K-Wunused-label[m[K]
+   [01;35m[Kotherwise[m[K: break;
+   [01;35m[K^~~~~~~~~[m[K
+[01m[Kimage.c:[m[K In function ‘[01m[KReadBinaryFile[m[K’:
+[01m[Kimage.c:148:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kk[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   int i,j,[01;35m[Kk[m[K;
+           [01;35m[K^[m[K
+gcc -g -Wall -c Stego.c
+[01m[KStego.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[KStego.c:29:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kb0[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   byte [01;35m[Kb0[m[K;
+        [01;35m[K^~[m[K
+[01m[KStego.c:26:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kk[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   int i, j, [01;35m[Kk[m[K, cover_bits, bits;
+             [01;35m[K^[m[K
+[01m[KStego.c:26:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kj[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   int i, [01;35m[Kj[m[K, k, cover_bits, bits;
+          [01;35m[K^[m[K
+gcc -g -Wall -o Stego Stego.o image.o
+gcc -g -Wall -c image.c
+[01m[Kimage.c:[m[K In function ‘[01m[KReadImage[m[K’:
+[01m[Kimage.c:139:3:[m[K [01;35m[Kwarning: [m[Klabel ‘[01m[Kotherwise[m[K’ defined but not used [[01;35m[K-Wunused-label[m[K]
+   [01;35m[Kotherwise[m[K: break;
+   [01;35m[K^~~~~~~~~[m[K
+[01m[Kimage.c:[m[K In function ‘[01m[KReadBinaryFile[m[K’:
+[01m[Kimage.c:148:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kk[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   int i,j,[01;35m[Kk[m[K;
+           [01;35m[K^[m[K
+gcc -g -Wall -c StegoExtract.c
+[01m[KStegoExtract.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[KStegoExtract.c:30:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kb0[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   byte [01;35m[Kb0[m[K;
+        [01;35m[K^~[m[K
+[01m[KStegoExtract.c:27:28:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kbits[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   int i, j, k, cover_bits, [01;35m[Kbits[m[K;
+                            [01;35m[K^~~~[m[K
+[01m[KStegoExtract.c:27:16:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kcover_bits[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   int i, j, k, [01;35m[Kcover_bits[m[K, bits;
+                [01;35m[K^~~~~~~~~~[m[K
+[01m[KStegoExtract.c:27:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kk[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   int i, j, [01;35m[Kk[m[K, cover_bits, bits;
+             [01;35m[K^[m[K
+[01m[KStegoExtract.c:27:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kj[m[K’ [[01;35m[K-Wunused-variable[m[K]
+   int i, [01;35m[Kj[m[K, k, cover_bits, bits;
+          [01;35m[K^[m[K
+gcc -g -Wall -o StegoExtract StegoExtract.o image.o
+#gcc -g -Wall -c image.c
+#gcc -g -Wall -c Stego.c
+#gcc -g -Wall -c StegoExtract.c
+bash-4.1$ ls
+cs262.pgm  half.pgm  image.c  image.h  image.o	Makefile  out.dat  program_to_hide.c  project3_Typescript_agupta23_2B3	Stego  Stego.c	StegoExtract  StegoExtract.c  StegoExtract.o  Stego.o
+bash-4.1$ ./Stg[Kego cs262.pgm [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcat Makefile
+#Avinash Gupta
+#G01009180
+#CS262 Lab Section 2B3
+#Project 3
+
+all: Stego StegoExtract
+
+#image.o: image.c
+	#gcc -g -Wall -c image.c
+
+#Stego.o: Stego.c
+	#gcc -g -Wall -c Stego.c
+
+#StegoExtract.o: StegoExtract.c
+	#gcc -g -Wall -c StegoExtract.c
+
+Stego: Stego.c
+	gcc -g -Wall -c image.c
+	gcc -g -Wall -c Stego.c
+	gcc -g -Wall -o Stego Stego.o image.o
+
+StegoExtract: StegoExtract.c
+	gcc -g -Wall -c image.c
+	gcc -g -Wall -c StegoExtract.c
+	gcc -g -Wall -o StegoExtract StegoExtract.o image.o
+
+clean:
+	rm -f image.o
+	rm -f Stego.o
+	rm -f StegoExtract.o
+	rm -f Stego
+	rm -f StegoExtract
+bash-4.1$ cat program_to_hide.c 
+#include<stdio.h>
+
+int main(){
+
+	printf("This is the C program is so important it is gonna be hidden in an image and sent to someone!\n");
+	printf("When I get extracted out they will know all the secrets that this program is hiding!! which is absolutely nothing\n");
+	return 1;
+}
+bash-4.1$ ./Stego cs262.pgm Stego_image.pgm prohram[K[K[K[Kgram_to_hide.c 
+
+Reading input file 'cs262.pgm'
+
+Reading binary file 'program_to_hide.c'
+ The size of b.size is 280
+Gnumber is: 01009180
+Writing file 'Stego_image.pgm'
+bash-4.1$ ls
+cs262.pgm  half.pgm  image.c  image.h  image.o	Makefile  out.dat  program_to_hide.c  project3_Typescript_agupta23_2B3	Stego  Stego.c	StegoExtract  StegoExtract.c  StegoExtract.o  Stego_image.pgm  Stego.o
+bash-4.1$ ./StegoExtract Stego_image.pgm out.dat
+
+Reading input file 'Stego_image.pgm'
+Extracted number is: 280
+Recovered Gnumber is: 01009180
+Writing file 'out.dat'
+bash-4.1$ cat out.dat
+#include<stdio.h>
+
+int main(){
+
+	printf("This is the C program is so important it is gonna be hidden in an image and sent to someone!\n");
+	printf("When I get extracted out they will know all the secrets that this program is hiding!! which is absolutely nothing\n");
+	return 1;
+}
+bash-4.1$ cmp program_to_hide.c out.dat
+bash-4.1$ make clean
+rm -f image.o
+rm -f Stego.o
+rm -f StegoExtract.o
+rm -f Stego
+rm -f StegoExtract
+bash-4.1$ ls
+cs262.pgm  half.pgm  image.c  image.h  Makefile  out.dat  program_to_hide.c  project3_Typescript_agupta23_2B3  Stego.c	StegoExtract.c	Stego_image.pgm
+bash-4.1$ exit
+
+Script done on Thu 19 Jul 2018 05:06:30 PM EDT
